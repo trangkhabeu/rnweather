@@ -3,7 +3,7 @@ import {TextInput, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import OcticonsIcon from 'react-native-vector-icons/Octicons';
 
-const Search = ({value, onChangeText, onSubmitEditing}) => {
+const Search = props => {
   return (
     <View
       style={{
@@ -20,11 +20,9 @@ const Search = ({value, onChangeText, onSubmitEditing}) => {
       />
       <TextInput
         placeholder="Search"
-        placeholderTextColor="#d3d3d3"
+        placeholderTextColor="black"
         contentVerticalAlignment="center"
-        value={value}
-        onChangeText={onChangeText}
-        onSubmitEditing={onSubmitEditing}
+        {...props}
         style={{
           marginRight: 10,
           backgroundColor: '#dcdcdc',
