@@ -59,10 +59,7 @@ const HomeScreen = () => {
   }
 
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-      }}>
+    <SafeAreaView style={styles.overView}>
       <ImageBackground
         source={convertWeatherToBackgroundImage(weather.weather?.[0].main)}
         resizeMode="cover"
@@ -99,6 +96,9 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  overView: {
+    flex: 1,
+  },
   background: {
     flex: 1,
   },
