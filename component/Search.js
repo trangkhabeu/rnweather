@@ -20,7 +20,12 @@ const Search = props => {
         style={styles.textInput}
       />
       <TouchableOpacity>
-        <OcticonsIcon name="search" size={30} color="black" />
+        <OcticonsIcon
+          name="search"
+          size={30}
+          color="black"
+          style={styles.OcticonsIcon}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -31,14 +36,19 @@ const styles = StyleSheet.create({
   searchView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 40,
+    alignItems: 'center',
+    height: 50,
     marginTop: 20,
+    borderRadius: 30,
+    borderColor: '#ddd',
+    borderWidth: 2,
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
   },
-  icon: {marginRight: 10},
+  icon: {marginHorizontal: 10},
+  OcticonsIcon: {marginHorizontal: 10},
   textInput: {
     marginRight: 10,
-    backgroundColor: '#dcdcdc',
-    width: 280,
+    width: 250,
     height: 35,
     textAlign: 'right',
   },
