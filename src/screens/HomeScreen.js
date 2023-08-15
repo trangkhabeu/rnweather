@@ -12,7 +12,7 @@ import getWeather from '../api/getWeather';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
-  const [cityName, setCity] = useState('');
+  const [cityName, setCityName] = useState('');
   const [weather, setWeather] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -38,7 +38,7 @@ const HomeScreen = () => {
     if (jpText.test(text)) {
       Alert.alert('半角英数で入力してください');
     } else {
-      setCity(text);
+      setCityName(text);
     }
   };
 
