@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import Search from '../component/Search';
-import APIWeather from '../api/APIWeather';
+import getWeather from '../api/getWeather';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
@@ -24,7 +24,7 @@ const HomeScreen = () => {
   const getApiWeather = async data => {
     try {
       setLoading(true);
-      const res = await APIWeather(data);
+      const res = await getWeather(data);
       setWeather(res);
     } catch (err) {
       setError(true);
